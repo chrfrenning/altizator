@@ -21,7 +21,7 @@ To install altizator, follow these easy steps:
 2. Log into [Azure Shell using Bash](https://shell.azure.com/)
 3. Paste the following line and hit enter to work the magic
 ``
-curl -sL https://raw.githubusercontent.com/chrfrenning/altizator/master/setup.sh | sudo bash
+curl -sL https://raw.githubusercontent.com/chrfrenning/altizator/master/setup.sh | bash
 ``
 4. When the script returns OK, it also provides you with a script tag to use in your production website
 5. Test the stuff, then deploy
