@@ -51,7 +51,7 @@ echo CosmosKey: $cosmosKey
 # Create cognitive services
 az cognitiveservices account create --name $rgn --resource-group $rgn --kind CognitiveServices --sku S0 --location $location
 
-cognitiveServicesKey=$(az cognitiveservices account keys list -n yapp00c88dc6 -g yapp00c88dc6 --query "key1" -o tsv)
+cognitiveServicesKey=$(az cognitiveservices account keys list -n $rgn -g $rgn --query "key1" -o tsv)
 echo CognitiveKey: $cognitiveServicesKey
 
 # TODO: Deploy and configure Azure Functions
