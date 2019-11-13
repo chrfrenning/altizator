@@ -32,3 +32,6 @@ If you just want a quick test, to see if this really works, drop in the followin
 `` <script scr="cdn.altizator.org/latest.js"></script> ``
 
 *TODO: NOTE TO SELF - Make this quick test stuff actually work*
+
+## The Contributions
+We'd very much like your contributions to this project. File issues anytime, for probs and ideas. Send pull requests. Help make the worlds website a more accessible place!
