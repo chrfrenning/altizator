@@ -37,9 +37,8 @@ az storage account create -n $rgn -g $rgn --sku "Standard_LRS" --location $locat
 
 storageKey=$(az storage account keys list -n $rgn -g $rgn --query "[?keyName=='key1'].value" -o tsv)
 echo StorageKey: $storageKey
-# TODO: Create static website and deploy javascript file
 
-# TODO: Create and connect a CDN to this to ensure global scale
+# TODO: Create static website and deploy javascript file
 
 # Create CosmosDB
 # Now creating single region storage, expand to use RAGRS and set up alt endpoint in CDN for failover
@@ -47,6 +46,7 @@ az cosmosdb create -n $rgn -g $rgn --locations regionName=$location failoverPrio
 
 cosmosKey=$(az cosmosdb keys list -n $rgn -g $rgn --query "primaryMasterKey" -o tsv)
 echo CosmosKey: $cosmosKey
+# TODO: Get cosmosdb endpoint too
 
 # Create cognitive services
 az cognitiveservices account create --name $rgn --resource-group $rgn --kind CognitiveServices --sku S0 --location $location
@@ -54,5 +54,10 @@ az cognitiveservices account create --name $rgn --resource-group $rgn --kind Cog
 cognitiveServicesKey=$(az cognitiveservices account keys list -n $rgn -g $rgn --query "key1" -o tsv)
 echo CognitiveKey: $cognitiveServicesKey
 
+# TODO: Get cognitive services endpoint too
+
 # TODO: Deploy and configure Azure Functions
-# TODO: Add Functions behind CDN for failover
+
+# TODO: Create and connect a CDN to this to ensure global scale
+# TODO: Add static website hosting script to CDN
+# TODO: Add Function behind CDN
